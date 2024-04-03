@@ -1,22 +1,29 @@
-function add(x,y){
+export function add(x,y){
     return x + y;
 }
 
-function substract(x,y){
+export function substract(x,y){
     return x - y;
 }
 
-function multiply(x,y){
+export function multiply(x,y){
     return x * y;
 }
 
-function divide(x,y){
+export function divide(x,y){
     return x / y;
 }
 
-module.exports = {  //Esto es un modulo creado por nosotros
-    add,
-    substract,
+// module.exports = {  //Esto es un modulo creado por nosotros, forma vieja de importar modulos
+//     add,
+//     substract,
+//     multiply,
+//     divide
+// }
+
+export default {    //Esto es un modulo creado por nosotros, para utilizar la sintaxis de import en esmodule.js
+    add,            //Por defecto vamos a exportar todas las funciones, pero podemos exportar una sola, así cuando la importen en otro archivo solo se pueden utilizar las funciones default, osea que 
+    substract,      //si ponen un nombre x en el import se exporta lo que hay en export default
     multiply,
     divide
 }
